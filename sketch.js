@@ -1,35 +1,213 @@
 function setup() {
   createCanvas(800,600)
-  background(248,248,248)
 }
 
 function draw() {
+ 
+  background("#f2f3f4")
+ 
+ //P5 Robot:
+ 
+push()
 
- colorMode(RGB)
 
- strokeWeight(5)
- stroke(0,0,0,255)
- fill(255,255,255,125)
+translate(-95,25)
+scale(1+(1/7),1+(1/7))
+ 
+  //Ombra:
+  fill(0,0,0,50);
+  noStroke()
+  ellipse(264,435,250,20)
+ 
+  //colli
+  stroke("#666666");
+  strokeWeight(6);
+  line(266,257,266,162);
+  line(276,257,276,162);
+  line(286,257,286,162);
+  
+  line(276,306,356,209);
+  line(281,312,362,214);
+  
+  line(240,260,220,225);
+  line(230,260,210,225);
+  
+ //antenne 1
+ 
+ line(276,155,246,112)
+ line(276,155,306,56)
+ line(276,155,342,170)
 
- line(0,0,200,320);
- rect(50,50,300,150);
- ellipse(200,200,400,200);
+push();
 
- colorMode(HSB)
- fill(0,100,100);
- stroke(0,0,0)
- strokeWeight(2)
- rect(280,280,25,25);
+scale((4/5),(4/5))
+translate(200,85)
 
- colorMode(RGB)
- stroke(0,0,0)
- noFill()
- ellipse(width/2,height/2,200,200)
+//antenne 2
+ line(276,155,246,112)
+ line(276,155,306,56)
+ line(276,155,342,170)
+ 
+pop()
 
- fill(255,255,255)
- stroke(0,0,0)
- ellipse(mouseX,mouseY,50,50)
+push()
 
- stroke(0,0,0)
- line(pmouseX,pmouseY,mouseX,mouseY)
+scale((4/5),(4/5))
+translate(-35,100)
+
+ //antenne 3
+ line(276,155,246,112)
+ line(276,155,306,56)
+ line(276,155,342,170)
+ 
+pop()
+
+//sfera sotto
+ noStroke();
+ fill("#666666");
+ ellipse(264,377,65,65);
+ 
+ //corpo
+ fill("#000000");
+ rect(219,257,90,120);
+
+ fill("#999999");
+ rect(219,274,90,6);
+
+//testa 1
+ fill("#000000");
+ ellipse(276,155,90,90);
+
+//occhi
+ fill("#ffffff");
+ ellipse(288,150,28,28);
+ fill("#000000");
+ ellipse(288,150,6,6);
+ fill("#999999");
+ ellipse(263,148,10,10);
+ ellipse(296,140,8,8);
+ ellipse(305,162,6,6);
+
+push()
+
+scale((4/5),(4/5))
+translate(200,85)
+
+//testa 2
+ fill("#000000");
+ ellipse(276,155,90,90);
+ 
+
+//occhi
+ fill("#ffffff");
+ ellipse(288,150,28,28);
+ fill("#000000");
+ ellipse(288,150,6,6);
+ fill("#999999");
+ ellipse(263,148,10,10);
+ ellipse(296,140,8,8);
+ ellipse(305,162,6,6);
+ 
+pop()
+
+push()
+
+scale((4/5),(4/5))
+translate(-35,100)
+
+//testa 3
+ fill("#000000");
+ ellipse(276,155,90,90);
+
+//occhi
+ fill("#ffffff");
+ ellipse(288,150,28,28);
+ fill("#000000");
+ ellipse(288,150,6,6);
+ fill("#999999");
+ ellipse(263,148,10,10);
+ ellipse(296,140,8,8);
+ ellipse(305,162,6,6);
+pop()
+
+pop()
+ 
+//Wall-E:
+
+push()
+
+translate(250, 0);
+
+ //Ombra:
+  fill(0,0,0,100);
+  noStroke()
+  ellipse(180+85+35,522,280,25)
+  
+ //Carat:
+  strokeWeight(6);
+  stroke("#140700");
+
+
+  //Cingoli SX:
+  fill("#8e7a6f");
+  rect(180,420,55,100);
+  line(180,440,180+55,440)
+  line(180,460,180+55,460)
+  line(180,480,180+55,480)
+  line(180,500,180+55,500)
+  
+  //mano Sx Sotto
+  fill("#e4d1bb");
+  ellipse(180+55,420-30,30,30)
+  ellipse(180+55+130,420-30,30,30)
+  
+  //corpo:
+  fill("#fad565");
+  rect(180+55,420-40,130,100);
+  fill("#949494");
+  rect(180+55,420-30-35,130,35);
+  
+  push()
+  //Cingoli DX:
+  translate(185, 0);
+  fill("#8e7a6f");
+  rect(180,420,55,100);
+  line(180,440,180+55,440)
+  line(180,460,180+55,460)
+  line(180,480,180+55,480)
+  line(180,500,180+55,500)
+  pop()
+  
+  //mano Sx
+  fill("#e4d1bb");
+  rect(180+55,420-30,30,15)
+  rect(180+55,420-30-15,30,15)
+  
+  //mano Dx
+  fill("#e4d1bb");
+  rect(180+55+100,420-30,30,15)
+  rect(180+55+100,420-30-15,30,15)
+   
+  //collo
+  fill("#fad565");
+  rect(180+55+60-2,420-30-35-80,15,80)
+  fill("#fad565");
+  rect(180+55+60-25,420-30-35-10,60,10)
+  fill("#949494");
+  rect(180+55+60+15-25,420-30-35-10-80,30,11)
+  //rect()
+   
+  //occhi Sx:
+  fill("#949494");
+  rect(210,420-30-35-10-80,80,45,45,0,180,45)
+  fill("#000000");
+  ellipse(180+85,287,34,34)
+   
+  //occhi Dx:
+  fill("#949494");
+  rect(210+80+20,420-30-35-10-80,80,45,0,45,180,45)
+  fill("#000000");
+  ellipse(180+85+70,287,34,34)
+   
+  pop()
 }
