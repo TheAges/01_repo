@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(800,600)
+  createCanvas(1100,600)
 }
 
 function draw() {
@@ -68,20 +68,20 @@ pop()
  ellipse(264,377,65,65);
  
  //corpo
- fill("#000000");
+ fill("#1c1c1c");
  rect(219,257,90,120);
 
  fill("#999999");
  rect(219,274,90,6);
 
 //testa 1
- fill("#000000");
+ fill("#1c1c1c");
  ellipse(276,155,90,90);
 
 //occhi
  fill("#ffffff");
  ellipse(288,150,28,28);
- fill("#000000");
+ fill("#545454");
  ellipse(288,150,6,6);
  fill("#999999");
  ellipse(263,148,10,10);
@@ -94,14 +94,14 @@ scale((4/5),(4/5))
 translate(200,85)
 
 //testa 2
- fill("#000000");
+ fill("#1c1c1c");
  ellipse(276,155,90,90);
  
 
 //occhi
  fill("#ffffff");
  ellipse(288,150,28,28);
- fill("#000000");
+ fill("#545454");
  ellipse(288,150,6,6);
  fill("#999999");
  ellipse(263,148,10,10);
@@ -116,7 +116,7 @@ scale((4/5),(4/5))
 translate(-35,100)
 
 //testa 3
- fill("#000000");
+ fill("#1c1c1c");
  ellipse(276,155,90,90);
 
 //occhi
@@ -131,6 +131,8 @@ translate(-35,100)
 pop()
 
 pop()
+ 
+
  
 //Wall-E:
 
@@ -210,4 +212,79 @@ translate(250, 0);
   ellipse(180+85+70,287,34,34)
    
   pop()
+  
+  
+  //Eva
+
+ stroke("#140700");
+ strokeWeight(4);
+ translate(750, 150);
+ scale(1+(1/2),1+(1/2))
+
+ angleMode(DEGREES)
+ 
+ //Corpo
+ 
+ fill("#e9eaeb")
+ push()
+ noStroke();
+ quad(60, 55, 100, 55, 130, 80, 30, 80);
+ pop();
+ arc(80, 80, 100, 250, 0, 180, OPEN);
+ arc(100, 80, 60, 50, 270, 0, OPEN);
+ arc(60, 80, 60, 50, 180, 270, OPEN);
+ line(60,55,100,55)
+
+ //Braccio Sx
+  push()
+  translate(125,125)
+  rotate(100)
+  fill("#e9eaeb")
+  arc(0, 0, 100, 28, 180, 0, OPEN);
+  arc(0, 0, 100, 15, 0, 180, OPEN);
+  pop()
+  
+  //Braccio Dx
+  push()
+  translate(35,125)
+  rotate(-100)
+  fill("#e9eaeb")
+  arc(0, 0, 100, 28, 180, 0, OPEN);
+  arc(0, 0, 100, 15, 0, 180, OPEN);
+  pop()
+
+ //Testa
+
+ arc(80, 19, 80, 78, 180, 0, OPEN);
+ arc(80, 19, 80, 50, 0, 180, OPEN);
+ 
+ fill("#4c4c4d")
+ noStroke()
+ arc(80, 19, 60, 55, 180, 0, OPEN);
+ arc(80, 19, 60, 28, 0, 180, OPEN);
+ 
+ //Occhio Sx:
+ fill("#2c6a9f")
+ noStroke()
+ arc(67, 13, 20, 15, 180, 0, OPEN);
+ arc(67, 13, 20, 18, 0, 180, OPEN);
+ fill("#4c4c4d")
+ arc(67, 22, 25, 18, 180, 0, OPEN);
+
+ 
+ //Occhio Dx:
+ fill("#2c6a9f")
+ noStroke()
+ arc(93, 13, 20, 15, 180, 0, OPEN);
+ arc(93, 13, 20, 18, 0, 180, OPEN);
+ fill("#4c4c4d")
+ arc(93, 22, 25, 18, 180, 0, OPEN);
+ 
+  
+ //Ombra:
+ fill(0,0,0,60);
+ noStroke();
+ ellipse(78,248,148,18)
+ 
+  
 }
